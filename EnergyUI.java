@@ -39,4 +39,23 @@ public class EnergyUI implements ActionListener {
         JButton Force = new JButton("Force");
         JButton Work = new JButton("Work");
         JButton Height = new JButton("Height");
+        
+         EnergyUI() {
+        frame.add(Period);
+        frame.add(potentialEnergy);
+        frame.add(Force);
+        frame.add(Work);
+        frame.add(Height);
+        frame.setSize(150, 200);
+        frame.setLayout(new GridLayout(7, 1));
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        Period.addActionListener(this);
+        potentialEnergy.addActionListener(this);
+        Force.addActionListener(this);
+        Work.addActionListener(this);
+        Height.addActionListener(this);
+
+    }
 }
